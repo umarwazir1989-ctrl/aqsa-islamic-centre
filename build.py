@@ -38,6 +38,7 @@ for filename,title,body in [('index.html','صفحۂ اول',home),('education.ht
 # Keep the main photograph and management photograph tied to their exact subjects.
 index_file=p/'index.html'
 index_html=index_file.read_text().replace('assets/photos/students-group.webp" alt="اقصیٰ اسلامک سنٹر کے طلبہ','assets/photos/masjid-main-clean.webp" alt="جامع مسجد اقصیٰ، ٹبہ امام تونسہ شریف')
+index_html=index_html.replace('fetchpriority="high">','fetchpriority="high" style="position:relative;inset:auto;top:auto;left:auto;width:100%;max-width:100%;height:100%;display:block;object-fit:cover;object-position:center;filter:none;opacity:1;visibility:visible">',1)
 index_html=index_html.replace('<span>اقصیٰ اسلامک سنٹر</span><strong>آج کی تعلیم، کل کی تعمیر</strong>','<span>ٹبہ امام، تونسہ شریف</span><strong>جامع مسجد اقصیٰ</strong>')
 announcement_preview='''<section class="section wrap announcement-preview"><div class="announcement-preview-card"><div><span class="eyebrow">اعلانات و تقریبات</span><h2>سالانہ قرآن و حدیث کانفرنس</h2><p>علم، اصلاح اور دینی رہنمائی کے بابرکت اجتماع کی تفصیلات اور گزشتہ تقریبات کی تصویری جھلکیاں دیکھیے۔</p>'''+button('اعلانات دیکھیے','announcements.html')+'''</div><figure><img src="assets/photos/conference-02.webp" alt="جامع مسجد اقصیٰ سالانہ قرآن و حدیث کانفرنس" loading="lazy"></figure></div></section>'''
 index_html=index_html.replace('<section class="wrap callout">',announcement_preview+'<section class="wrap callout">')
