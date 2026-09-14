@@ -1,5 +1,14 @@
 {
   "outputDirectory": "dist",
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/gallery", "destination": "/gallery.html" },
+    { "source": "/education", "destination": "/education.html" },
+    { "source": "/welfare", "destination": "/welfare.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/announcements", "destination": "/announcements.html" },
+    { "source": "/donate", "destination": "/donate.html" },
+    { "source": "/contact", "destination": "/contact.html" }
+  ]
 }
